@@ -3,8 +3,8 @@ Contributors: ninjateam
 Donate link: https://1.envato.market/document-library-wordpress
 Tags: elementor, document gallery, file list, pdf viewer, file library, document library
 Requires at least: 5.0
-Tested up to: 6.5
-Stable tag: 2.0.8.1
+Tested up to: 6.7
+Stable tag: 3.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,9 +12,10 @@ Create WordPress document library using FileBird and Gutenberg or any WordPress 
 
 == Description ==
 
-FileBird Document Library is a free lightweight plugin to help you create and publish a document gallery using **Gutenberg** editor and **FileBird folders**. It comes with 2 layout styles and allows you to use multiple document categories.
+**FileBird Document Library** is a lightweight plugin that helps you create and publish document galleries using **Gutenberg** and **FileBird folders**. It offers two layout styles and supports multiple document categories. 
 
-**NEW!** It provides a [shortcode](https://ninjateam.gitbook.io/filebird/addons/filebird-document-library/shortcode) to insert your documents into any WordPress page builders and theme builders!
+**NEW!** You can now insert your documents into any WordPress page or theme builder using a [shortcode](https://ninjateam.gitbook.io/filebird/addons/filebird-document-library/shortcode).
+
 
 📌 [Documentation](https://ninjateam.gitbook.io/filebird/filebird-document-library) | [Quick Demo](https://media-folder.ninjateam.org/filebird-document-library-demo/)
 
@@ -63,10 +64,12 @@ The [FileBird Document Library Pro](https://1.envato.market/document-library-pro
 - And more!
 
 == Requirements ==
-These are the prerequisites to make this plugin work for you:
-- FileBird version 5.0 or higher ([Free](https://wordpress.org/plugins/filebird/) or [Pro](https://1.envato.market/FileBird-Pro-Media-Library))
-- Gutenberg editor
-- Any WordPress page builder plugin that supports shortcode inserter.
+
+This plugin requires the following:
+
+- FileBird ([Free](https://wordpress.org/plugins/filebird/) or [Pro](https://1.envato.market/FileBird-Pro-Media-Library)): Version 5.0 or higher for folder management and organization
+- Gutenberg editor (optional): For creating and editing your document galleries
+- A WordPress page builder (optional): With shortcode support for flexible integration of your document galleries
 
 == Installation ==
 Setup is easy and takes fewer than one minute.
@@ -101,6 +104,11 @@ Happy Library-ing! 😍
 
 
 == Changelog ==
+
+Dec 2, 2024 - Version 3.0.3
+- Fixed: Language issues
+- Fixed: Undefined array key “libraryType” warning
+- Fixed: Typo
 
 = Jun 25, 2024 – Version 2.0.8.1 =
 - Added: "Required plugin" admin notice

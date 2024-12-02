@@ -4,7 +4,7 @@
  * Plugin URI:    		https://ninjateam.org/wordpress-media-library-folders/
  * Requires Plugins: 	filebird
  * Description:   		Display your documents and files in customizable list and grid gallery.
- * Version:       		2.0.8.1
+ * Version:       		3.0.3
  * Author:        		Ninja Team
  * Author URI:    		https://ninjateam.org
  * Text Domain:   		filebird-dl
@@ -22,7 +22,7 @@ if ( ! defined( 'FBV_DL_URL' ) ) {
 }
 
 if ( ! defined( 'FBV_DL_VERSION' ) ) {
-	define( 'FBV_DL_VERSION', '2.0.8.1' );
+	define( 'FBV_DL_VERSION', '3.0.3' );
 }
 
 function fbv_dl_init() {

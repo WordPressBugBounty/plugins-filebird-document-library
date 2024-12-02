@@ -33,7 +33,7 @@ class DocumentLibraryShortcode {
 				'search'         => '',
 				'orderBy'        => 'post_title',
 				'orderType'      => 'DESC',
-				'selectedFolder' => array(),
+				'selectedFolder' => '',
 			),
 			'title'   => 'Title',
 			'column'  => 3,

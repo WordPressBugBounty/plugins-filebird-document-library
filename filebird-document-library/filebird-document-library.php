@@ -4,7 +4,7 @@
  * Plugin URI:    		https://ninjateam.org/wordpress-media-library-folders/
  * Requires Plugins: 	filebird
  * Description:   		Display your documents and files in customizable list and grid gallery.
- * Version:       		3.0.3
+ * Version:       		3.0.7
  * Author:        		Ninja Team
  * Author URI:    		https://ninjateam.org
  * Text Domain:   		filebird-dl
@@ -22,7 +22,7 @@ if ( ! defined( 'FBV_DL_URL' ) ) {
 }
 
 if ( ! defined( 'FBV_DL_VERSION' ) ) {
-	define( 'FBV_DL_VERSION', '3.0.3' );
+	define( 'FBV_DL_VERSION', '3.0.7' );
 }
 
 function fbv_dl_init() {
@@ -49,11 +49,11 @@ function fbv_dl_init() {
 }
 
 function fbv_dl_missing_notice() {
-	echo '<div class="error"><p><strong>' . sprintf( esc_html__( 'FileBird Document Library (Pro) requires FileBird plugin to be installed and active. Please download %1$s or %2$s.', 'filebird-dl' ), '<a href="https://wordpress.org/plugins/filebird" target="_blank">FileBird</a>', '<a href="https://1.envato.market/FileBird-Pro-Media-Library" target="_blank">FileBird Pro</a>' ) . '</strong></p></div>';
+	echo '<div class="error"><p><strong>' . sprintf( esc_html__( 'FileBird Document Library (Lite) requires FileBird plugin to be installed and active. Please download %1$s or %2$s.', 'filebird-dl' ), '<a href="https://wordpress.org/plugins/filebird" target="_blank">FileBird</a>', '<a href="https://1.envato.market/FileBird-Pro-Media-Library" target="_blank">FileBird Pro</a>' ) . '</strong></p></div>';
 }
 
 function fbv_dl_not_supported() {
-	echo '<div class="error"><p><strong>' . sprintf( esc_html__( 'FileBird Document Library (Pro) requires %1$s or %2$s %3$s or greater to be installed and active.', 'filebird-dl' ), '<a href="https://wordpress.org/plugins/filebird" target="_blank">FileBird</a>', '<a href="https://1.envato.market/FileBird-Pro-Media-Library" target="_blank">FileBird Pro</a>', '5.0' ) . '</strong></p></div>';
+	echo '<div class="error"><p><strong>' . sprintf( esc_html__( 'FileBird Document Library (Lite) requires %1$s or %2$s %3$s or greater to be installed and active.', 'filebird-dl' ), '<a href="https://wordpress.org/plugins/filebird" target="_blank">FileBird</a>', '<a href="https://1.envato.market/FileBird-Pro-Media-Library" target="_blank">FileBird Pro</a>', '5.0' ) . '</strong></p></div>';
 }
 
 

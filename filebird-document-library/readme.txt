@@ -3,8 +3,8 @@ Contributors: ninjateam
 Donate link: https://1.envato.market/document-library-wordpress
 Tags: elementor, document gallery, file list, pdf viewer, file library, document library
 Requires at least: 5.0
-Tested up to: 6.7
-Stable tag: 3.0.3
+Tested up to: 6.8
+Stable tag: 3.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -105,7 +105,11 @@ Happy Library-ing! 😍
 
 == Changelog ==
 
-Dec 2, 2024 - Version 3.0.3
+= Sep 12, 2025 - Version 3.0.7 =
+- Fixed: Tables sometimes are not loaded
+- Refactor the shortcode
+
+= Dec 2, 2024 - Version 3.0.3 =
 - Fixed: Language issues
 - Fixed: Undefined array key “libraryType” warning
 - Fixed: Typo

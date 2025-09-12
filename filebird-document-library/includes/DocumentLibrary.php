@@ -16,6 +16,9 @@ class DocumentLibrary extends AbstractBlock {
 
 		add_action( 'rest_api_init', array( $this, 'register_rest_routes' ) );
 		add_action( 'fbdl_enqueue_frontend', array( $this, 'enqueue_frontend_assets' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_frontend_assets' ) );
+		
+		add_filter( 'as3cf_object_meta', array( $this, 'force_download_as3cf' ), 10, 4 );
 	}
 
 	public function plugin_row_meta( $links, $file ) {
@@ -166,9 +169,7 @@ class DocumentLibrary extends AbstractBlock {
 
 	public function render( $attributes = array(), $content = '' ) {
 
-		$attributes['request']['selectedFolder'] = array_map(function( $id ){ 
-			return Helpers::encrypt( $id );
-		 }, $attributes['request']['selectedFolder']);
+		$attributes['request']['selectedFolder'] = array_map(array('FileBird\Blocks\Helpers', 'encrypt'), $attributes['request']['selectedFolder']);
 
 		ob_start(); ?>
 <div id="filebird-document-library">
@@ -267,7 +268,7 @@ class DocumentLibrary extends AbstractBlock {
 			$queryArgs['orderby']  = 'meta_value_num';
 			$queryArgs['order']    = $orderType;
 		}
-
+		$queryArgs = apply_filters( 'fbdl_query_args', $queryArgs, $params );
 		$query = new \WP_Query( $queryArgs );
 
 		$posts = $query->get_posts();
@@ -314,5 +315,17 @@ class DocumentLibrary extends AbstractBlock {
 				'maxNumPages' => $query->max_num_pages,
 			)
 		);
+	}
+	public function force_download_as3cf( $args, $post_id, $image_size, $copy ) {
+		$extension = strtolower( pathinfo( $args['Key'], PATHINFO_EXTENSION ) );
+		$force_download_exts = array(
+		  'pdf', 'zip', 'doc', 'docx', 'xls', 'xlsx',
+		  'jpg', 'jpeg', 'png', 'gif', 'bmp', 'tiff',
+		  'txt', 'csv', 'ppt', 'pptx', 'mp4'
+		);
+		if ( apply_filters( 'filebird_dl_as3cf', false ) || in_array( $extension, $force_download_exts, true ) ) {
+			$args['ContentDisposition'] = 'attachment; filename="' . basename( $args['Key'] ) . '"';
+		}
+		return $args;
 	}
 };

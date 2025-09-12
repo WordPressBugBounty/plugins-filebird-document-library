@@ -24,32 +24,65 @@ class DocumentLibraryShortcode {
 	}
 
 	public function add_shortcode( $attrs ) {
-		$default = array(
-			'request' => array(
-				'pagination'     => array(
-					'current' => 1,
-					'limit'   => 5,
+		if( isset( $attrs['setting'] ) ) {
+			$defaultSettings = array(
+				'request' => array(
+					'pagination'     => array(
+						'current' => 1,
+						'limit'   => 5,
+					),
+					'search'         => '',
+					'orderBy'        => 'post_title',
+					'orderType'      => 'DESC',
+					'selectedFolder' => '',
 				),
-				'search'         => '',
-				'orderBy'        => 'post_title',
-				'orderType'      => 'DESC',
-				'selectedFolder' => '',
-			),
-			'title'   => 'Title',
-			'column'  => 3,
-			'layout'  => 'grid',
-		);
-
-		extract(
-			shortcode_atts(
+				'title'   => 'Title',
+				'column'  => 3,
+				'layout'  => 'grid',
+			);
+	
+			extract(
+				shortcode_atts(
+					array(
+						'setting' => wp_json_encode( $defaultSettings ),
+					),
+					$attrs
+				)
+			);
+	
+			$params = json_decode( $setting, true );
+		}
+		if( ! isset( $attrs['setting'] ) || is_null( $params ) ) {
+			$attrs = shortcode_atts(
 				array(
-					'setting' => wp_json_encode( $default ),
-				),
-				$attrs
-			)
-		);
-
-		$params = json_decode( $setting, true );
+					'column' => 3,
+					'title' => 'Title',
+					'layout' => 'grid',
+					'current' => 1,
+					'limit' => 5,
+					'orderby' => 'post_title',
+					'order' => 'DESC',
+					'selected_folder' => '',
+					'search' => '',
+				), $attrs, 'fbdl'
+			);
+			$params = [
+				'request' => [
+					'pagination' => [
+						'current' => $attrs['current'],
+						'limit' => $attrs['limit'],
+					],
+					'search' => $attrs['search'],
+					'orderBy' => $attrs['orderby'],
+					'orderType' => $attrs['order'],
+					'selectedFolder' => $attrs['selected_folder'],
+				],
+				'title' => $attrs['title'],
+				'column' => $attrs['column'],
+				'layout' => $attrs['layout'],
+			];
+		}
+		
 		$params['request']['selectedFolder'] = implode( ',', array_map(function( $id ){ 
 			return Helpers::encrypt( $id );
 		 }, explode(',', $params['request']['selectedFolder'])) );
@@ -60,7 +93,7 @@ class DocumentLibraryShortcode {
 		$html .= esc_attr( wp_json_encode( $params ) );
 		$html .= '"></div></div>';
 
-		do_action( 'fbdl_enqueue_frontend' );
+		// do_action( 'fbdl_enqueue_frontend' );
 
 		return $html;
 	}

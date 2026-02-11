@@ -1,9 +1,9 @@
 === FileBird Document Library ===
 Contributors: ninjateam
 Donate link: https://1.envato.market/document-library-wordpress
-Tags: elementor, document gallery, file list, pdf viewer, file library, document library
+Tags: elementor, documents, file list, pdf viewer, file
 Requires at least: 5.0
-Tested up to: 6.8
+Tested up to: 6.9
 Stable tag: 3.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -15,7 +15,6 @@ Create WordPress document library using FileBird and Gutenberg or any WordPress 
 **FileBird Document Library** is a lightweight plugin that helps you create and publish document galleries using **Gutenberg** and **FileBird folders**. It offers two layout styles and supports multiple document categories. 
 
 **NEW!** You can now insert your documents into any WordPress page or theme builder using a [shortcode](https://ninjateam.gitbook.io/filebird/addons/filebird-document-library/shortcode).
-
 
 📌 [Documentation](https://ninjateam.gitbook.io/filebird/filebird-document-library) | [Quick Demo](https://media-folder.ninjateam.org/filebird-document-library-demo/)
 

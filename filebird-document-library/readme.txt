@@ -4,7 +4,7 @@ Donate link: https://1.envato.market/document-library-wordpress
 Tags: elementor, documents, file list, pdf viewer, file
 Requires at least: 5.0
 Tested up to: 6.9
-Stable tag: 3.0.7
+Stable tag: 3.0.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,13 +14,11 @@ Create WordPress document library using FileBird and Gutenberg or any WordPress 
 
 **FileBird Document Library** is a lightweight plugin that helps you create and publish document galleries using **Gutenberg** and **FileBird folders**. It offers two layout styles and supports multiple document categories. 
 
-**NEW!** You can now insert your documents into any WordPress page or theme builder using a [shortcode](https://ninjateam.gitbook.io/filebird/addons/filebird-document-library/shortcode).
-
-📌 [Documentation](https://ninjateam.gitbook.io/filebird/filebird-document-library) | [Quick Demo](https://media-folder.ninjateam.org/filebird-document-library-demo/)
+📌 [Free vs Pro](https://ninjateam.gitbook.io/filebird/addons/filebird-document-library/free-vs-pro) | [Quick Demo](https://media-folder.ninjateam.org/media-folder-manager-for-wordpress/document-library/)
 
 [youtube https://youtu.be/kKO4ywj7PnE?si=exjiDbfnoEzamF5l]
 
-[Free vs Pro](https://ninjateam.gitbook.io/filebird/addons/filebird-document-library/free-vs-pro) | [Premium](https://1.envato.market/document-library-pro) 💎
+[FileBird Document Library Pro](https://1.envato.market/document-library-pro) 💎
 
 ###⚡️ FEATURES
 
@@ -57,9 +55,12 @@ For further customization, you will be able to display the document gallery in g
 ###💎 PRO VERSION
 The [FileBird Document Library Pro](https://1.envato.market/document-library-pro) allows you to show folder directory on the frontend:
 
-- Show specific folders in the folder tree
+- Show multi-level folders in the folder tree
 - Show breadcrumb and nested folders for better navigation
 - Customizable search scope 
+- Sidebar folder tree navigation
+- Extra metadata columns (YouTube, external links, etc.)
+- Custom folder icons
 - And more!
 
 == Requirements ==
@@ -84,8 +85,12 @@ Enjoy!
 = Is FileBird really required for this plugin? =
 Yes, it is. You should have **FileBird** (Free or Pro, version 5+) installed and activated in advance so that you can use the **FileBird document library** Gutenberg block feature.
 
+= How many document libraries can I create in the Free version? =
+The Free version allows you to create unlimited library blocks through Gutenberg, but only 1 document library shortcode.
+If you need multiple libraries for different pages using WordPress page builders, you’ll need the Pro version.
+
 = When I move a document file to another folder, does this action affect the document gallery? =
-Yes, if you move/remove/add new files to your FileBird folders, it will also reflect on the front page/post of document gallery.
+Yes, if you move/remove/add new files to your FileBird folders, it will also be reflected on the front page/post of the document gallery.
 
 = Does it work with Elementor? =
 Definitely yes! To make FileBird Document Library work with Elementor, just **create a shortcode** for your document library, and then [embed it into Elementor page builder](https://ninjateam.gitbook.io/filebird/addons/filebird-document-library/shortcode/embed-in-elementor).
@@ -101,8 +106,17 @@ Happy Library-ing! 😍
 3. Document library published in Grid layout
 4. Document library published in List layout
 
-
 == Changelog ==
+
+= Feb 25, 2026 - Version 3.0.8 =
+- Added: Custom column for YouTube or external links
+- Added: Catalan language
+- Added: Option to secure download URLs (Pro version)
+- Added: Option to enable the Download button by file type (Pro version)
+- Added: Option to change the Tree icon (Pro version)
+- Added: Custom fields (Pro version)
+- Added: Custom folder icons to show on the frontend library (Pro version)
+- Added: Custom thumbnail used as placeholder when your server does not support generating thumbnails for PDF files
 
 = Sep 12, 2025 - Version 3.0.7 =
 - Fixed: Tables sometimes are not loaded

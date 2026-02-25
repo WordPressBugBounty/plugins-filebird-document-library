@@ -69,8 +69,8 @@ class DocumentLibraryShortcode {
 			$params = [
 				'request' => [
 					'pagination' => [
-						'current' => $attrs['current'],
-						'limit' => $attrs['limit'],
+						'current' => (int)$attrs['current'],
+						'limit' => (int)$attrs['limit'],
 					],
 					'search' => $attrs['search'],
 					'orderBy' => $attrs['orderby'],

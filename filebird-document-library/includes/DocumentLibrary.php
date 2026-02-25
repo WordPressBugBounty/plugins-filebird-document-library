@@ -113,7 +113,7 @@ class DocumentLibrary extends AbstractBlock {
 			$this->namespace . '-' . $this->block_name . '-js',
 			FBV_DL_URL . 'blocks/dist/index.js',
 			$this->get_editor_dependencies(),
-			NJFB_VERSION,
+			FBV_DL_VERSION,
 			true
 		);
 
@@ -123,7 +123,7 @@ class DocumentLibrary extends AbstractBlock {
 			$this->namespace . '-' . $this->block_name . '-css',
 			FBV_DL_URL . 'blocks/dist/index.css',
 			$this->get_editor_dependencies(),
-			NJFB_VERSION
+			FBV_DL_VERSION
 		);
 		$this->localize_script();
 	}
@@ -147,7 +147,7 @@ class DocumentLibrary extends AbstractBlock {
 			$this->namespace . '-' . $this->block_name . '-frontend',
 			FBV_DL_URL . 'blocks/dist/frontend.js',
 			array( 'wp-element', 'wp-i18n' ),
-			NJFB_VERSION,
+			FBV_DL_VERSION,
 			true
 		);
 
@@ -163,7 +163,7 @@ class DocumentLibrary extends AbstractBlock {
 			$this->namespace . '-' . $this->block_name . '-frontend',
 			FBV_DL_URL . 'blocks/dist/index.css',
 			array(),
-			NJFB_VERSION
+			FBV_DL_VERSION
 		);
 	}
 

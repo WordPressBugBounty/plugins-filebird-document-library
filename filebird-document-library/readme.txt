@@ -3,8 +3,8 @@ Contributors: ninjateam
 Donate link: https://1.envato.market/document-library-wordpress
 Tags: elementor, documents, file list, pdf viewer, file
 Requires at least: 5.0
-Tested up to: 6.9
-Stable tag: 3.0.8
+Tested up to: 7.0
+Stable tag: 3.0.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -107,6 +107,10 @@ Happy Library-ing! 😍
 4. Document library published in List layout
 
 == Changelog ==
+
+= May 25, 2026 – Version 3.0.9 =
+- Fixed: UI issues with WordPress 7.0
+- Fixed: A conflict where submit buttons are disabled (Pro version)
 
 = Feb 25, 2026 - Version 3.0.8 =
 - Added: Custom column for YouTube or external links

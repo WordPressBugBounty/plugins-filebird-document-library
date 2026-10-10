@@ -3,8 +3,8 @@ Contributors: ninjateam
 Donate link: https://1.envato.market/document-library-wordpress
 Tags: elementor, documents, file list, pdf viewer, file
 Requires at least: 5.0
-Tested up to: 7.0
-Stable tag: 3.0.9
+Tested up to: 7.1
+Stable tag: 3.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -107,6 +107,12 @@ Happy Library-ing! 😍
 4. Document library published in List layout
 
 == Changelog ==
+
+= Oct 10, 2026 – Version 3.1.1 =
+- Added: Native Divi 5 Document Library module (PRO version)
+- Improved: Keep the scroll position steady when changing page
+- Improved: Download feature
+- Fixed: Several UI elements
 
 = May 25, 2026 – Version 3.0.9 =
 - Fixed: UI issues with WordPress 7.0
